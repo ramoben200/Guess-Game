@@ -443,7 +443,7 @@ bot.start(async (ctx) => {
 
 bot.action('vip', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*🌍 Ülkeler*`,{
+    ctx.replyWithMarkdown(`🌍 VİP Grub`,{
         reply_markup:{
             inline_keyboard:[
                 [{text:'🇦🇿 Azərbaycan', callback_data:'AZ'}],
