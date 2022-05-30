@@ -565,4 +565,4 @@ bot.telegram.getMe().then(botInfo => {
     console.log(``Sistem Aktifleşti => ${bot.options.username}``)
 })
 
-bot.launch();
+bot.launch();`
