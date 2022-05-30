@@ -432,20 +432,21 @@ bot.start(async (ctx) => {
     await ctx.replyWithMarkdown(ozelMesaj(ctx.update.message.chat.id < 0),{
         reply_markup:{
             inline_keyboard:[
-                [{text:'✅ 𝖡𝖾𝗇𝗂 𝖦𝗋𝗎𝖻𝖺 𝖤𝗄𝗅𝖾 ✅', url:`https://t.me/${process.env.BOT_ISMI}?startgroup=true`}],
-                [{text:'📝 𝖱𝖾𝗌𝗆𝗂 𝖪𝖺𝗇𝖺𝗅', url:`t.me/StarBotKanal`},{text:'📝 𝖵𝖨𝖯 𝖦𝗋𝗎𝖻 ', url:`t.me/SohbetGirdap'}]
+                [{text:'Botu Grupa Ekle ✅', url:`https://t.me/${process.env.BOT_ISMI}?startgroup=true`}],
+                [{text:'Resmi Kanalımız 📣', url:`t.me/teslagametr`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
     })
 })
 
-bot.action('xjddje', ctx=>{
+bot.action('start', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(``eğlenceli hale getirmek için bir oyun botuyum ! için !`
+    ctx.replyWithMarkdown(`*Merhaba,Ben TeslaGameBot Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botuyum🤖\n**Temel komutların listesi için /yardim*
         `,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'VİP Gruplar 💎', callback_data:'vip'},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'Botu Grupa Ekle ✅', url:`t.me/${process.env.BOT_ISMI}?startgroup=true`}],
+                [{text:'Resmi Kanalımız 📣', url:`t.me/teslagametr`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
     })
@@ -455,7 +456,7 @@ bot.action('xjddje', ctx=>{
 
 bot.action('vip', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(``*🌍 Ülkeler*``,{
+    ctx.replyWithMarkdown(`*🌍 Ülkeler*`,{
         reply_markup:{
             inline_keyboard:[
                 [{text:'🇦🇿 Azərbaycan', callback_data:'AZ'}],
@@ -469,7 +470,7 @@ bot.action('vip', ctx=>{
 // AZƏRBAYCAN GRUP DÜYMƏLƏRİ
 bot.action('AZ', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(``*🇦🇿 VİP Gruplar 🏆*``,{
+    ctx.replyWithMarkdown(`*🇦🇿 VİP Gruplar 🏆*`,{
         reply_markup:{
             inline_keyboard:[
                 [{text:'1) Qrup ', url:'t.me/husnublog'}],
@@ -484,7 +485,7 @@ bot.action('AZ', ctx=>{
 bot.action('TR', ctx=>{
     ctx.deleteMessage()
     ctx.replyWithMarkdown(`
-`*🇹🇷 VİP Gruplar 🏆*`
+*🇹🇷 VİP Gruplar 🏆*
         `,{
         reply_markup:{
             inline_keyboard:[
@@ -562,7 +563,7 @@ bot.catch((err) => {
 // Botun nickname alan kod
 bot.telegram.getMe().then(botInfo => {
     bot.options.username = botInfo.username
-    console.log(``Sistem Aktifleşti => ${bot.options.username}``)
+    console.log(`Sistem Aktifleşti => ${bot.options.username}`)
 })
 
 bot.launch();
