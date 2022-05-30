@@ -399,8 +399,8 @@ ${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `$
 
 bot.command("yardim", (ctx) => {
     return ctx.replyWithMarkdown(Degisken(`
-        *• Merhaba !\n\n•Tahmin oyunu icin tasarlanmış bir botum .Bot yalnızca grublar için tasarlanmıştır .\n
-        🔖 Kurallar : Sana resimleri atıyorum ve sen kategoriye uygun rakamlarla tahmin etmelisin , İlk olarak botu gruba ekle ve yönetici yap ve ardından komutlar ile oyun başlat !\n\n🎯  Temel Komutlar Listesi :\n\n» /game •> Tahmin Oyunu Başlat .\n» /stop •> Tahmin Oyununu Durdur .\n» /top •> Grubtaki Top 20 Oyuncular .\n» /global •> Global Top 20 Oyuncular.\n» /kullanici •> Kullanıcı Bilgisi .\n» /id •> Grub Bilgisi .\n» /yardim •> Yardım Menüsü .\n\n🎯 Rekabet Başlasın İyi Olan Kazansin  . . .*`))
+        *• Merhaba !\n\n•Tahmin oyunu icin tasarlanmış bir botum .\n\nBot yalnızca grublar için tasarlanmıştır .\n
+🔖 Kurallar : Sana resimleri atıyorum ve sen kategoriye uygun rakamlarla tahmin etmelisin , İlk olarak botu gruba ekle ve yönetici yap ve ardından komutlar ile oyun başlat !\n\n🎯  Temel Komutlar Listesi :\n\n» /game •> Tahmin Oyunu Başlat .\n» /stop •> Tahmin Oyununu Durdur .\n» /top •> Grubtaki Top 20 Oyuncular .\n» /global •> Global Top 20 Oyuncular.\n» /kullanici •> Kullanıcı Bilgisi .\n» /id •> Grub Bilgisi .\n» /yardim •> Yardım Menüsü .\n\n🎯 Rekabet Başlasın İyi Olan Kazansin  . . .*`))
 })
 
 bot.command("kullanici", async (ctx) => {
