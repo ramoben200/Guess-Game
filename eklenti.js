@@ -4,9 +4,9 @@ module.exports = {
 	},
 	kullaniciProfil: user => {
 	const lastName = user.last_name ? ` <b>${user.last_name}</b>` : '';
-	const username = user.username ? ` \n\n<b>👤Kullanıcı Adı: @${user.username}</b>` : '';
-	const userBio = user.bio ? ` \n\n<b>📖Bio: ${user.bio}</b>` : '';
-	return `<b>Ad: <a href="tg://user?id=${user.id}">${user.first_name}${lastName}</a></b>${username}${userBio}\n\n🆔: <code>${user.id}</code>`;
+	const username = user.username ? ` \n\n<b>• Kullanıcı Adı : @${user.username}</b>` : '';
+	const userBio = user.bio ? ` \n\n<b>• Bio :\n${user.bio}</b>` : '';
+	return `<b>• Adı : <a href="tg://user?id=${user.id}">${user.first_name}${lastName}</a></b>${username}${userBio}\n\n🆔 : <code>${user.id}</code>`;
     },
     ArtiEksi: n => n > 0 ? `+${n}` : n, // Artı Eksi Puanlama
 	Degisken: str => str.replace(/\t+/gm, ""),
