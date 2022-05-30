@@ -80,8 +80,8 @@ const OyunYaratHusnuEhedov = chatId => {
 }
 
 const ozelMesaj = isGroup => Degisken(`
-    *🇹🇷 Merhaba,Ben Tahmin Oyun Botu Zamanınızı eğlenceli hale getirmek için tasarlanmış bir Telegram oyun botuyum !*
-    ${isGroup ? "" : "\n*Temel komutların listesi için /yardim Komutunu Kullanın !*"}
+    *🇹🇷 Merhaba ,\n\n📍 Ben Tahmin Oyun Botu Zamanınızı eğlenceli hale getirmek için tasarlanmış bir Telegram oyun botuyum !*
+    ${isGroup ? "" : "\n*•> Temel komutların listesi için /yardim Komutunu Kullanın !*"}
 `)
 
 
@@ -206,7 +206,7 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 				null,
 				RaundMesajHusnuEhedov(chatId, round, time),
 				{
-					parse_mode: "Markdown"
+					parse_mode:"Markdown"
 				}
 			)
 			time++
