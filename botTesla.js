@@ -245,7 +245,7 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 				)
 			}
 			else {
-				ctx.reply("Cevap verilmedi, Oyun Durduruldu❕")
+				ctx.reply("•> *Cevap verilmedi, Oyun Durduruldu*❕")
 				OyunDurdurHusnuEhedov(ctx, chatId)
 				return
 			}
@@ -441,7 +441,7 @@ bot.start(async (ctx) => {
 
 bot.action('dndjd', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*Merhaba,Ben TeslaGameBot Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botuyum🤖\n**Temel komutların listesi için /yardim*
+    ctx.replyWithMarkdown(`*zamanim*
         `,{
         reply_markup:{
             inline_keyboard:[
