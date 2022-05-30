@@ -432,14 +432,14 @@ bot.start(async (ctx) => {
     await ctx.replyWithMarkdown(ozelMesaj(ctx.update.message.chat.id < 0),{
         reply_markup:{
             inline_keyboard:[
-                [{text:'Botu Grupa Ekle ✅', url:`https://t.me/${process.env.BOT_ISMI}?startgroup=true`}],
-                [{text:'Resmi Kanalımız 📣', url:`t.me/teslagametr`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'✅ Beni Grupa Ekle ✅', url:`https://t.me/${process.env.BOT_ISMI}?startgroup=true`}],
+                [{text:'📝 Resmi Kanal', url:`t.me/StarBotKanal`},{text:'📝 VİP Grub', url:`t.me/SohbetGirdap`}]
             ]
         }
     })
 })
 
-bot.action('start', ctx=>{
+bot.action('dndnd', ctx=>{
     ctx.deleteMessage()
     ctx.replyWithMarkdown(`*Merhaba,Ben TeslaGameBot Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botuyum🤖\n**Temel komutların listesi için /yardim*
         `,{
