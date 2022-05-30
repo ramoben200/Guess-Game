@@ -80,7 +80,7 @@ const OyunYaratHusnuEhedov = chatId => {
 }
 
 const ozelMesaj = isGroup => Degisken(`
-    *🇹🇷 Merhaba ,\n\n📍 Ben Tahmin Oyun Botu Zamanınızı eğlenceli hale getirmek için tasarlanmış bir Telegram oyun botuyum !*
+    *🇹🇷 Merhaba !\n\n📍 Ben Tahmin Oyun Botu Zamanınızı eğlenceli hale getirmek için tasarlanmış bir Telegram oyun botuyum !*
     ${isGroup ? "" : "\n*•> Temel komutların listesi için /yardim Komutunu Kullanın !*"}
 `)
 
@@ -173,7 +173,7 @@ const RaundMesajHusnuEhedov = (chatId, round, time) => {
 
 	return Degisken(`
 		*🔮 Raund ${round + 1}/${process.env.RAUND_SAYI}*
-		🤔 Sizce bu kişi kaç yaşında ?
+		*🤔 Sizce bu kişi kaç yaşında ?*
 		${answers.length > 0 ? 
 			`\n${answers.map((member, index) => `${index + 1}. *${member.firstName}* •> ${member.answer}`).join("\n")}\n`
 			:
@@ -237,7 +237,7 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 					Degisken(`
 						📮 Fotoğraftaki Kişi : *${rightAnswer} ${HusnuEhedov(rightAnswer, "yaşında", "yaşında", "yaşında")}*\n*🏆 Puan Kazananlar :*
 
-						${top.sort((a, b) => b.addScore - a.addScore).map((member, index) => `${["🥇","🎖","🏅"][index] || "🔸"} ${index + 1}. *${member.firstName}* •> ${ArtiEksi(member.addScore)}`).join("\n")}
+						${top.sort((a, b) => b.addScore - a.addScore).map((member, index) => `${["🥇","🎖","🏅"][index] || "🔸"} ${index + 1}. *${member.firstName}* : ${ArtiEksi(member.addScore)}`).join("\n")}
 					`),
 					{
 						reply_to_message_id: guessMessage.message_id,
@@ -245,7 +245,7 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 				)
 			}
 			else {
-				ctx.reply("•> *Cevap verilmedi, Oyun Durduruldu*❕")
+				ctx.reply("•> Cevap verilmedi, Oyun Durduruldu❕")
 				OyunDurdurHusnuEhedov(ctx, chatId)
 				return
 			}
@@ -280,7 +280,7 @@ bot.command("game", (ctx) => {
 		let chat = getChat(chatId)
 		if (chat) {
 			if (chat.isPlaying) {
-				return ctx.reply("•> *Oyun Şuan aktif , \ndurdurmak için /stop Kullanın* .")
+				return ctx.reply("•> Oyun Şuan aktif , \ndurdurmak için /stop Kullanın .")
 			}
 			else {
 				chat.isPlaying = true
@@ -294,7 +294,7 @@ bot.command("game", (ctx) => {
 		else {
 			dbChatAlHusnuEhedov(chatId)
 		}
-		ctx.replyWithHTML(`<b><a href="tg://user?id=${ctx.from.id}">${ctx.from.first_name}</a> *Tarafından,\n\nYaş Tahmin Oyunu Başlatıldı* 🥳</b>`)
+		ctx.replyWithHTML(`<b><a href="tg://user?id=${ctx.from.id}">${ctx.from.first_name}</a> Tarafından,\n\nYaş Tahmin Oyunu Başlatıldı 🥳</b>`)
 		OyunHusnuEhedov(ctx, chatId)
 	}
 	else {
@@ -341,7 +341,7 @@ bot.command("top", (ctx) => {
 				ctx.replyWithMarkdown(Degisken(`
 *🏆 Gruptaki Top 20 Oyuncular :*
 
-${top.sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${["","",""][index] || ""} ${index + 1}) *${member.firstName}* •> ${member.score} ${HusnuEhedov(member.score, "puan", "puan", "puan")}`).join("\n")}
+${top.sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${["","",""][index] || ""} ${index + 1}) *${member.firstName}* : ${member.score} ${HusnuEhedov(member.score, "puan", "puan", "puan")}`).join("\n")}
 				`))
 			}
 			else {
@@ -387,7 +387,7 @@ bot.command("global", (ctx) => {
             if (top.length > 0) {
                 ctx.replyWithHTML(Degisken(`
      <b>🏆 Global Top 20 Oyuncular</b>\n
-${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${["🥇","🥈","🥉"][index] || "🎲"} ${index + 1}) <b><i>${member.firstName} •> ${member.score} ${HusnuEhedov(member.score, "puan", "puan", "puan")}</i></b>`).join("\n")}
+${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${["🥇","🥈","🥉"][index] || "🎲"} ${index + 1}) <b><i>${member.firstName} : ${member.score} ${HusnuEhedov(member.score, "puan", "puan", "puan")}</i></b>`).join("\n")}
                 `))
             }
         }
@@ -399,7 +399,7 @@ ${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `$
 
 bot.command("yardim", (ctx) => {
     return ctx.replyWithMarkdown(Degisken(`
-        *• Merhaba !\n\n•Tahmin oyunu icin tasarlanmış bir botum .\n\nBot yalnızca grublar için tasarlanmıştır .\n
+        *• Merhaba !\n\n•Tahmin oyunu icin tasarlanmış bir botum .\nBot yalnızca grublar için tasarlanmıştır .\n
 🔖 Kurallar : Sana resimleri atıyorum ve sen kategoriye uygun rakamlarla tahmin etmelisin , İlk olarak botu gruba ekle ve yönetici yap ve ardından komutlar ile oyun başlat !\n\n🎯  Temel Komutlar Listesi :\n\n» /game •> Tahmin Oyunu Başlat .\n» /stop •> Tahmin Oyununu Durdur .\n» /top •> Grubtaki Top 20 Oyuncular .\n» /global •> Global Top 20 Oyuncular.\n» /kullanici •> Kullanıcı Bilgisi .\n» /id •> Grub Bilgisi .\n» /yardim •> Yardım Menüsü .\n\n🎯 Rekabet Başlasın İyi Olan Kazansin  . . .*`))
 })
 
@@ -420,7 +420,7 @@ bot.command("kullanici", async (ctx) => {
 bot.command('id', async (ctx, next) => {
 	if (ctx.chat.type !== "supergroup") return null;
     const chatBio = ctx.chat.description
-    await ctx.telegram.sendMessage(ctx.chat.id, `<b>Grup İd</b> :<code>${ctx.chat.id}</code>\<b>Grup İsmi</b> : <code>${ctx.chat.title}</code>`, { parse_mode: 'HTML' }) 
+    await ctx.telegram.sendMessage(ctx.chat.id, `<b>Grup İd</b> :<code>${ctx.chat.id}</code>\<b>\n\nGrup İsmi</b> : <code>${ctx.chat.title}</code>`, { parse_mode: 'HTML' }) 
     return next();
 });
 
