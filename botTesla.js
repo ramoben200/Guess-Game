@@ -433,7 +433,8 @@ bot.start(async (ctx) => {
         reply_markup:{
             inline_keyboard:[
                 [{text:'✅ Beni Grupa Ekle ✅', url:`https://t.me/${process.env.BOT_ISMI}?startgroup=true`}],
-                [{text:'📝 Resmi Kanal', url:`t.me/StarBotKanal`},{text:'📝 VİP Grub', url:`t.me/SohbetGirdap`}]
+                [{text:'📝 Resmi Kanal', url:`t.me/StarBotKanal`},{text:'📝 VİP Grub', url:`t.me/SohbetGirdap`}],
+                [{text:'🇹🇷 Bot Sahibi 🇹🇷', url:`t.me/Hayiboo`}]
             ]
         }
     })
