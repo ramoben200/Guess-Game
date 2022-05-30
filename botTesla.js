@@ -440,19 +440,6 @@ bot.start(async (ctx) => {
 })
 
 
-
-bot.action('vip', ctx=>{
-    ctx.deleteMessage()
-    ctx.replyWithMarkdown(🌍 Ülke,{
-        reply_markup:{
-            inline_keyboard:[
-                [{text:'🇦🇿 Azərbaycan', callback_data:'AZ'}],
-                [{text:'🇹🇷 Türkiye', callback_data:'TR'}]
-            ]
-        }
-    })
-})
-
 /// /// /// /// /// /// ///  <!-- BOT START MENÜ SON --> /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// 
 
 
