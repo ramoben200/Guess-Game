@@ -80,8 +80,8 @@ const OyunYaratHusnuEhedov = chatId => {
 }
 
 const ozelMesaj = isGroup => Degisken(`
-    • *Merhaba !\n\n• Ben Star Tahmin Bot , Tahmin Oyunu Zamanınızı eğlenceli hale getirmek için tasarlanmıştır !*
-    ${isGroup ? "" : "\n*Temel komutların listesi için /yardim komutunu kullanın .*"}
+    *🇹🇷 Merhaba,Ben Tahmin Oyun Botu Zamanınızı eğlenceli hale getirmek için tasarlanmış bir Telegram oyun botuyum !*
+    ${isGroup ? "" : "\n*Temel komutların listesi için /yardim Komutunu Kullanın !*"}
 `)
 
 
@@ -439,9 +439,9 @@ bot.start(async (ctx) => {
     })
 })
 
-bot.action('start', ctx=>{
+bot.action('xjddje', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*Merhaba,Ben TeslaGameBot Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botuyum🤖\n**Temel komutların listesi için /yardim*
+    ctx.replyWithMarkdown(`* eğlenceli hale getirmek için bir oyun botuyum !** için /yardim !*
         `,{
         reply_markup:{
             inline_keyboard:[
