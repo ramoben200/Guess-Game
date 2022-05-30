@@ -441,7 +441,7 @@ bot.start(async (ctx) => {
 
 bot.action('xjddje', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`* eğlenceli hale getirmek için bir oyun botuyum !** için /yardim !*
+    ctx.replyWithMarkdown(``eğlenceli hale getirmek için bir oyun botuyum ! için !`
         `,{
         reply_markup:{
             inline_keyboard:[
