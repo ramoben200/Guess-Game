@@ -506,7 +506,7 @@ bot.catch((err) => {
 // Botun nickname alan kod
 bot.telegram.getMe().then(botInfo => {
     bot.options.username = botInfo.username
-    console.log(`iletisim •> hybd`)
+    console.log(` iletisim => jsjdj `)
 })
 
 bot.launch();
