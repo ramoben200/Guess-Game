@@ -439,19 +439,6 @@ bot.start(async (ctx) => {
     })
 })
 
-bot.action('dndjd', ctx=>{
-    ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*zamanim*
-        `,{
-        reply_markup:{
-            inline_keyboard:[
-                [{text:'Botu Grupa Ekle ✅', url:`t.me/${process.env.BOT_ISMI}?startgroup=true`}],
-                [{text:'Resmi Kanalımız 📣', url:`t.me/zamanimiz`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
-            ]
-        }
-    })
-})
-
 
 
 bot.action('vip', ctx=>{
@@ -460,38 +447,7 @@ bot.action('vip', ctx=>{
         reply_markup:{
             inline_keyboard:[
                 [{text:'🇦🇿 Azərbaycan', callback_data:'AZ'}],
-                [{text:'🇹🇷 Türkiye', callback_data:'TR'}],
-                [{text:'🔙 Geri', callback_data:'start'}]
-            ]
-        }
-    })
-})
-
-// AZƏRBAYCAN GRUP DÜYMƏLƏRİ
-bot.action('AZ', ctx=>{
-    ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*🇦🇿 VİP Gruplar 🏆*`,{
-        reply_markup:{
-            inline_keyboard:[
-                [{text:'1) Qrup ', url:'t.me/husnublog'}],
-                [{text:'2) Qrup ', url:'t.me/husnublog'}],
-                [{text:'🔙 Geri', callback_data:'vip'}]
-            ]
-        }
-    })
-})
-
-// TÜRK GRUP DÜYMƏLƏRİ
-bot.action('TR', ctx=>{
-    ctx.deleteMessage()
-    ctx.replyWithMarkdown(`
-*🇹🇷 VİP Gruplar 🏆*
-        `,{
-        reply_markup:{
-            inline_keyboard:[
-                [{text:'1) Grub', url:'t.me/husnublog'}],
-                [{text:'2) Grub', url:'t.me/husnublog'}],
-                [{text:'🔙 Geri', callback_data:'vip'}]
+                [{text:'🇹🇷 Türkiye', callback_data:'TR'}]
             ]
         }
     })
