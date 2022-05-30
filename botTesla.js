@@ -49,7 +49,7 @@ bot.command("txt", async (ctx) => {
                 parse_mode: 'HTML'
             })
         } else {
-            ctx.reply('•> *Botta henüz oyun oynanmadı*.')
+            ctx.reply('•> Botta henüz oyun oynanmadı.')
         }
     }) 
 });
@@ -60,7 +60,7 @@ bot.command("sinfo", async (ctx) => {
         if (comments && comments.length > 0) {
             await ctx.replyWithHTML(`<i>Grup sayısı :  ${comments.length}</i>`)
         } else {
-            ctx.reply('•> *Botta henüz oyun oynanmadı* .')
+            ctx.reply('•> Botta henüz oyun oynanmadı .')
         }
     })
 });
