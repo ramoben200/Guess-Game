@@ -51,7 +51,7 @@ bot.command("txt", async (ctx) => {
         } else {
             ctx.reply('•> *Botta henüz oyun oynanmadı*.')
         }
-    })
+    }) 
 });
 
 bot.command("sinfo", async (ctx) => {
@@ -149,12 +149,12 @@ const OyunDurdurHusnuEhedov = (ctx, chatId) => {
 			ctx.replyWithMarkdown(Degisken(`
 				*🏆 Kazananlar Sıralaması :*
 
-				${top.sort((a, b) => b.score - a.score).map((member, index) => `${["🥇","🎖","🏅"][index] || "🔸"} ${index + 1}. *${member.firstName}* •> ${member.score} ${HusnuEhedov(member.score, "puan 🎁", "puan 🎁", "puan 🎁")}`).join("\n")}
+				${top.sort((a, b) => b.score - a.score).map((member, index) => `${["🥇","🎖","🏅"][index] || "🔸"} ${index + 1}. *${member.firstName}* : ${member.score} ${HusnuEhedov(member.score, "puan ", "puan ", "puan ")}`).join("\n")}
 			`))
 		}
 	}
 	else {
-		ctx.reply("•> *Oyun başlamadı ...\nOyunu Başlatmak için  /game Kullanın .*")
+		ctx.reply("•> Oyun başlamadı ...\nOyunu Başlatmak için  /game Kullanın .")
 	}
 }
 const RaundMesajHusnuEhedov = (chatId, round, time) => {
