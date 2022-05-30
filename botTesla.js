@@ -455,7 +455,7 @@ bot.action('xjddje', ctx=>{
 
 bot.action('vip', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*🌍 Ülkeler*`,{
+    ctx.replyWithMarkdown(``*🌍 Ülkeler*``,{
         reply_markup:{
             inline_keyboard:[
                 [{text:'🇦🇿 Azərbaycan', callback_data:'AZ'}],
@@ -469,7 +469,7 @@ bot.action('vip', ctx=>{
 // AZƏRBAYCAN GRUP DÜYMƏLƏRİ
 bot.action('AZ', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*🇦🇿 VİP Gruplar 🏆*`,{
+    ctx.replyWithMarkdown(``*🇦🇿 VİP Gruplar 🏆*``,{
         reply_markup:{
             inline_keyboard:[
                 [{text:'1) Qrup ', url:'t.me/husnublog'}],
@@ -484,7 +484,7 @@ bot.action('AZ', ctx=>{
 bot.action('TR', ctx=>{
     ctx.deleteMessage()
     ctx.replyWithMarkdown(`
-*🇹🇷 VİP Gruplar 🏆*
+`*🇹🇷 VİP Gruplar 🏆*`
         `,{
         reply_markup:{
             inline_keyboard:[
@@ -562,7 +562,7 @@ bot.catch((err) => {
 // Botun nickname alan kod
 bot.telegram.getMe().then(botInfo => {
     bot.options.username = botInfo.username
-    console.log(`Sistem Aktifleşti => ${bot.options.username}`)
+    console.log(``Sistem Aktifleşti => ${bot.options.username}``)
 })
 
 bot.launch();
