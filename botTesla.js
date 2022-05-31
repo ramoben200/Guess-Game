@@ -1,6 +1,6 @@
 ////////////////////////////////////////
 // Başka github hesabına yükləməy olmaz
-// Reponu öz adına çıxaran peysərdi...!!!
+// Reponu öz adına çıxaran peysərdi..!!!
 
 
 require("dotenv").config();
