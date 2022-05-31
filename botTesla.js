@@ -434,7 +434,7 @@ bot.start(async (ctx) => {
             inline_keyboard:[
                 [{text:'✅ Beni Grupa Ekle ✅', url:`https://t.me/${process.env.BOT_ISMI}?startgroup=true`}],
                 [{text:'📝 Resmi Kanal', url:`t.me/StarBotKanal`},{text:'📝 VİP Grub', url:`t.me/SohbetGirdap`}],
-                [{text:'🇹🇷 Bot Sahibi 🇹🇷', url:`t.me/Hayiboo`}]
+                [{text:'🇹🇷 Kaynak Kodu 🇹🇷', url:`https://github.com/MehmetAtes21/Guess-Game`}]
             ]
         }
     })
@@ -446,8 +446,9 @@ bot.action('dndnd', ctx=>{
         `,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'Botu Grupa Ekle ✅', url:`t.me/${process.env.BOT_ISMI}?startgroup=true`}],
-                [{text:'Resmi Kanalımız 📣', url:`t.me/teslagametr`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'✅ Beni Grupa Ekle ✅', url:`https://t.me/${process.env.BOT_ISMI}?startgroup=true`}],
+                [{text:'📝 Resmi Kanal', url:`t.me/StarBotKanal`},{text:'📝 VİP Grub', url:`t.me/SohbetGirdap`}],
+                [{text:'🇹🇷 Kaynak Kodu 🇹🇷', url:`https://github.com/MehmetAtes21/Guess-Game`}]
             ]
         }
     })
