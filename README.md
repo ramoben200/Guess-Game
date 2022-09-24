@@ -2,7 +2,7 @@
 
 ### 🔹 Kolay Heroku Kurulum
   
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sirincay/ramoben200)  
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sirincay/TeslaGameV1)  
  Deploy Sonrası Yapılması Gerekenler:</i><br/>
       web npm start butonu kapatın</i><br/>
      <img src="img/heroku1.jpg" alt="heroku" width="200" height="150"><br/>
